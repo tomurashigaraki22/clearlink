@@ -169,7 +169,7 @@ const Footer = () => {
                 
             </div>
             <div>
-                <div className="flex flex-row items-start justify-between w-full pt-[100px]">
+                <div className="flex flex-row items-start justify-between w-full pt-[100px] pb-[20px]">
                     <div className="flex flex-row items-center space-x-4 ml-[100px]  ">
                         <Copyright color="gray" className="text-xl"/>
                         <p className="text-[20px] text-gray-700">2023 ClearLink. All Rights reserved</p>

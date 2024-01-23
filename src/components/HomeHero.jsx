@@ -7,6 +7,7 @@ import avatar3 from '../assets/avatar3.png'
 import avatar4 from '../assets/avatar4.png'
 import avatar5 from '../assets/avatar5.png'
 import avatar6 from '../assets/avatar6.png'
+import { motion } from 'framer-motion';
 
 
 const HomeHero = () => {
@@ -28,21 +29,39 @@ const HomeHero = () => {
       <div className="flex mt-[80px]">
         <div className="flex flex-row items-center ml-[100px] mt-12 mr-[100px] justify-between w-full">
           <div className="flex flex-col items">
+            <motion.div
+              initial={{x: -1000}}
+              animate={{x: 0}}
+              transition={{delay: 0.1, duration: 1.0}}
+            >
             <p className="text-[50px] font-bold leading-tight">Uniting the world,</p>
             <p className="text-[50px] font-bold leading-tight">one video call at a time</p>
-            <div className="mt-8">
+            </motion.div>
+            <motion.div 
+            initial={{x: -1000}}
+            animate={{x: 0}}
+            transition={{delay: 0.3, duration: 1.0}}
+            className="mt-8">
                 <p className="text-[20px] text-gray-400 leading-relaxed">Experience the future of communication with ClearLink -</p>
                 <p className="text-[20px] text-gray-400 leading-relaxed">where crystal-clear video conferencing meets</p>
                 <p className="text-[20px] text-gray-400 leading-relaxed">unparalleled simplicity</p>
-            </div>
-            <div className="mt-8 flex flex-row space-x-4">
+            </motion.div>
+            <motion.div 
+            initial={{opacity: 0.5, scale: 0}}
+            animate={{opacity: 1, scale: 1}}
+            transition={{delay: 0.5, duration: 1.0}}
+            className="mt-8 flex flex-row space-x-4">
                 <button className="text-white bg-blue-500 font-bold border border-white px-4 py-2 rounded-full hover:bg-blue-300 transition">Start your free trial</button>
                 <div className="flex flex-row items-center text-blue-500 space-x-2">
                 <Bot/>
                 <p>Discover AI assistant</p>
                 </div>
-            </div>
-            <div className="flex flex-row items mt-4">
+            </motion.div>
+            <motion.div 
+            initial={{y: -100}}
+            animate={{y: 0}}
+            transition={{ delay: 0.1, duration: 1.0}}
+            className="flex flex-row items mt-4">
                 <div style={{ position: "relative", width: ringSize, height: "50px" }} className="mt-[50px] pl-[190px]">
                     <img
                     src={avatar1}
@@ -83,14 +102,18 @@ const HomeHero = () => {
                     <p className="text-md">from 3,000+ reviews</p>
                     </div>
                 </div>
-                </div>
+                </motion.div>
 
             
             
 
           </div>
           <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
-        <div className="flex flex-col items-center justify-center">
+        <motion.div 
+          initial={{opacity: 0.2, scale: 0.4}}
+          animate={{opacity: 1, scale: 1}}
+          transition={{delay: 0.1, duration: 1.0}}
+          className="flex flex-col items-center justify-center">
           <div className="grid grid-cols-3 gap-2">
             {/* Avatar Images */}
             <img
@@ -151,7 +174,7 @@ const HomeHero = () => {
               <Settings color="#87CEEB" height="1.5em" width="1.5em" />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
         </div>
       </div>
